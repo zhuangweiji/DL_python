@@ -4,7 +4,9 @@ import matplotlib.pylab as plt
 
 
 def step_function(x):
-    return np.array(x > 0, dtype=np.int)
+    # return np.array(x > 0, dtype=np.int)
+    y = x > 0   # 不等号运算后默认生成bool类型
+    return y.astype(np.int)
 
 X = np.arange(-5.0, 5.0, 0.1)
 Y = step_function(X)
